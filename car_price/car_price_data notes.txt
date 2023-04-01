@@ -1,0 +1,52 @@
+Attributes
+ID
+Price: price of the care(Target Column)
+Levy
+Manufacturer
+Model
+Prod. year
+Category
+Leather interior
+Fuel type
+Engine volume
+Mileage
+Cylinders
+Gear box type
+Drive wheels
+Doors
+Wheel
+Color
+Airbags
+
+
+
+-------------------------------
+Advisory Points for anaylysis and modelling
+ID - is a primary key of the dataset and is thus useless for the modeling, remove it
+Price - is our target value
+Levy - replace the - with zeros and typecast it into int , also placing a kink at  2,500 would be great for this one
+Manufacturer - is highly populated, limit the values till  12 and place the leftovers in other
+Model - is higly populated, limit the values till  12 and place the leftovers in other
+Prod. year - replace the values greater than  2005 , to  2005
+Category - is highly populated, limit the values till  7
+Leather Interior - this column is in good condition
+Fuel Type - this column is in good condition
+Engine volume - break this column into two
+Turbo - the cars which have turbo will be  1
+Engine_volume - make bins for this and treat this as categorical column
+Mileaeg - remove the word km and make this a int column, place a kink at  6,00,000
+Cylinders - change the values for this column, [ 14 to  12] , [ 9
+  to  8
+ ] , [ 7
+  to  6
+ ] , [ 16
+  to  12
+ ] , [ 10
+  to  12
+ ] , [ 12
+  to  8
+ ]
+Gear Box Type - this column is in good condition
+Wheel - this column is in good condition
+Colors - is highly populated , limit this to  7
+Airbags - this column is in good condtion
